@@ -1,0 +1,48 @@
+"C:\Program Files\JetBrains\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Ruben Rodrigues\Desktop\SOproject_thread_sem"
+-- The C compiler identification is GNU 8.1.0
+-- Detecting C compiler ABI info
+CMake Error at C:/Program Files/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.19/Modules/CMakeDetermineCompilerABI.cmake:48 (try_compile):
+  Failed to open
+
+    C:/Users/Ruben Rodrigues/Desktop/SOproject_thread_sem/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeLists.txt
+
+  Permission denied
+Call Stack (most recent call first):
+  C:/Program Files/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.19/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)
+  CMakeLists.txt:2 (project)
+
+
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe
+CMake Error at C:/Program Files/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.19/Modules/CMakeTestCCompiler.cmake:53 (try_compile):
+  Failed to open
+
+    C:/Users/Ruben Rodrigues/Desktop/SOproject_thread_sem/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeLists.txt
+
+  Permission denied
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Check for working C compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe - broken
+CMake Error at C:/Program Files/JetBrains/CLion 2020.3.1/bin/cmake/win/share/cmake-3.19/Modules/CMakeTestCCompiler.cmake:66 (message):
+  The C compiler
+
+    "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Ruben Rodrigues/Desktop/SOproject_thread_sem/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/Ruben Rodrigues/Desktop/SOproject_thread_sem/cmake-build-debug/CMakeFiles/CMakeError.log".

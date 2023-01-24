@@ -1,0 +1,543 @@
+\hypertarget{main_8h}{}\doxysection{main.\+h File Reference}
+\label{main_8h}\index{main.h@{main.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgene}{gene}}
+\item 
+struct \mbox{\hyperlink{structgenome}{genome}}
+\item 
+struct \mbox{\hyperlink{structgenome__list}{genome\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structgene__dict}{gene\+\_\+dict}}
+\item 
+struct \mbox{\hyperlink{structint__array}{int\+\_\+array}}
+\item 
+struct \mbox{\hyperlink{structmutation}{mutation}}
+\item 
+struct \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}
+\item 
+struct \mbox{\hyperlink{structshelf}{shelf}}
+\item 
+struct \mbox{\hyperlink{structparams}{params}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8h_a6a079162ea5bab34bc5cfa86d2675c69}{MAX100}}~100
+\item 
+\#define \mbox{\hyperlink{main_8h_a6821bafc3c88dfb2e433a095df9940c6}{BUF\+\_\+\+SIZE}}~4096
+\item 
+\#define \mbox{\hyperlink{main_8h_ac348236d656b195cf77833516032bbd0}{DICT\+\_\+\+SIZE}}~11
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structgene}{gene}} \mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}}
+\item 
+typedef struct \mbox{\hyperlink{structgenome}{genome}} \mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}}
+\item 
+typedef struct \mbox{\hyperlink{structgenome__list}{genome\+\_\+list}} \mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}}
+\item 
+typedef struct \mbox{\hyperlink{structgene__dict}{gene\+\_\+dict}} \mbox{\hyperlink{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}{GENE\+\_\+\+DICT}}
+\item 
+typedef struct \mbox{\hyperlink{structint__array}{int\+\_\+array}} \mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}}
+\item 
+typedef struct \mbox{\hyperlink{structmutation}{mutation}} \mbox{\hyperlink{main_8h_afed2a7b843ddab43ebc98c2ee8c06ab3}{MUTATION}}
+\item 
+typedef struct \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}} \mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}}
+\item 
+typedef struct \mbox{\hyperlink{structshelf}{shelf}} \mbox{\hyperlink{main_8h_a5217862ec48be9e2f390734c3754b7a1}{SHELF}}
+\item 
+typedef struct \mbox{\hyperlink{structparams}{params}} \mbox{\hyperlink{main_8h_a42b4cb1030af90b29b11f025ab5aa860}{PARAMS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}} $\ast$ \mbox{\hyperlink{main_8h_a1959c28ed3b14203bb92d9291cf2bc36}{find\+\_\+gene}} (\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$\mbox{\hyperlink{structgenome}{genome}}, char $\ast$gene\+\_\+name)
+\item 
+void \mbox{\hyperlink{main_8h_a2e0c92c61965fbf69ab5e7ab6ddffbcc}{insert\+\_\+int\+\_\+array}} (\mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}} $\ast$\mbox{\hyperlink{structint__array}{int\+\_\+array}}, int element)
+\item 
+\mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}} $\ast$ \mbox{\hyperlink{main_8h_a6717246a71ecf97977c0826d9e569642}{gene\+\_\+cmp}} (\mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}} g1, \mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}} g2)
+\item 
+void \mbox{\hyperlink{main_8h_abe64e730ad313621e2c507047efbae67}{insert\+\_\+mutation}} (\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$\mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}, char $\ast$genome\+\_\+a, char $\ast$genome\+\_\+b, char $\ast$\mbox{\hyperlink{structgene}{gene}}, \mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}} $\ast$gene\+\_\+mut)
+\item 
+void \mbox{\hyperlink{main_8h_a26d41145462be79a5bbba299b8a7d2ad}{genome\+\_\+cmp}} (\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$\mbox{\hyperlink{structgenome}{genome}}, \mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$\mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}})
+\item 
+void \mbox{\hyperlink{main_8h_a5885a876daee7f61c9869c8b7eb47c2d}{read\+\_\+genomes}} (\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$\mbox{\hyperlink{main_8c_a1532da449ed5a12aad0e8f4310e50d92}{gl}}, char $\ast$path)
+\item 
+void \mbox{\hyperlink{main_8h_a1e3374ecffaa10ce121b069f19f868db}{remove\+\_\+white\+\_\+spaces}} (char $\ast$str)
+\item 
+void \mbox{\hyperlink{main_8h_a3e586bc6bd868c8c00d965b92395e426}{insert\+\_\+gene}} (\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$\mbox{\hyperlink{structgenome}{genome}}, \mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}} $\ast$\mbox{\hyperlink{structgene}{gene}})
+\item 
+char $\ast$ \mbox{\hyperlink{main_8h_aac76f46287962d9b1c183d62e9b75c19}{find\+\_\+protein\+\_\+name}} (char $\ast$protein)
+\item 
+\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$ \mbox{\hyperlink{main_8h_abc7f3becc7eedf180252ac187dea4890}{find\+\_\+genome}} (\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$\mbox{\hyperlink{main_8c_a1532da449ed5a12aad0e8f4310e50d92}{gl}}, char $\ast$g\+\_\+id)
+\item 
+void \mbox{\hyperlink{main_8h_adced95ea5d9673a7425e85474829d8ae}{insert\+\_\+genome}} (\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$\mbox{\hyperlink{main_8c_a1532da449ed5a12aad0e8f4310e50d92}{gl}}, \mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$g)
+\item 
+void \mbox{\hyperlink{main_8h_afe5ba97532a3015460a8a03afdf959de}{print\+\_\+genome}} (\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} \mbox{\hyperlink{structgenome}{genome}})
+\item 
+\mbox{\hyperlink{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}{GENE\+\_\+\+DICT}} $\ast$ \mbox{\hyperlink{main_8h_a9651d8d6b928be54c48d3bfc80fed592}{find\+\_\+gene\+\_\+dict}} (char $\ast$name)
+\item 
+int \mbox{\hyperlink{main_8h_ac4a99598a892709379a7a7723fc16dec}{get\+\_\+gene\+\_\+padding}} (char $\ast$name)
+\item 
+\mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}} $\ast$ \mbox{\hyperlink{main_8h_a66651c44028aa4e15ef1ee1b5467b0e5}{create\+\_\+gene}} (char $\ast$name, char $\ast$seq)
+\item 
+void \mbox{\hyperlink{main_8h_a66e4315bc2141d303060778f7fed43a6}{parse\+\_\+genome}} (\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$\mbox{\hyperlink{main_8c_a1532da449ed5a12aad0e8f4310e50d92}{gl}}, char $\ast$cds)
+\item 
+long \mbox{\hyperlink{main_8h_ad6598c9b9c3f2462f9a484d280ef1d67}{get\+\_\+time\+\_\+useconds}} (long $\ast$time\+\_\+usec)
+\item 
+void \mbox{\hyperlink{main_8h_ac0a6f9739a58e90a8e68610dab5091e7}{save\+\_\+mutation\+\_\+array}} (\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$\mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}, char $\ast$path, int detail)
+\item 
+void \mbox{\hyperlink{main_8h_a573ee832e2c6843bce1e8ae88055c5c5}{free\+\_\+mutations}} (\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$\mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}})
+\item 
+void \mbox{\hyperlink{main_8h_a8a1a61b7cdb55a664a4251ebcec1b0a0}{handler}} (int signal\+\_\+number)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{main_8h_a06f39d11eaf439a3f67681a4c3ecffcd}{writen}} (int fd, const void $\ast$ptr, size\+\_\+t n)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{main_8h_af200aee142b36264b2143ec19fabe936}{readn}} (int fd, void $\ast$ptr, size\+\_\+t n)
+\item 
+void \mbox{\hyperlink{main_8h_a124b18d9f81c36faf86a331e621ac58c}{save\+\_\+mutation\+\_\+array\+\_\+pipe}} (\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$\mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}, int detail, int w\+\_\+fds)
+\item 
+void $\ast$ \mbox{\hyperlink{main_8h_a6bbe0e6527a26e4b76c5f06b60f1b1c7}{worker\+Thread}} (void $\ast$t)
+\item 
+void \mbox{\hyperlink{main_8h_aeccd49b8e84cc8458b616649d75e57a7}{lanca\+Prod\+Cons}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{main_8h_af05ed034df91972aa3a8128cfd713e75}{produtor}} (void $\ast$param)
+\item 
+void $\ast$ \mbox{\hyperlink{main_8h_ab1160938bae08f610b6e2c32213df84c}{consumidor}} (void $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}{GENE\+\_\+\+DICT}} \mbox{\hyperlink{main_8h_a90cd2f88eead02158d3bd4925cd111c5}{gd}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8h_a6821bafc3c88dfb2e433a095df9940c6}\label{main_8h_a6821bafc3c88dfb2e433a095df9940c6}} 
+\index{main.h@{main.h}!BUF\_SIZE@{BUF\_SIZE}}
+\index{BUF\_SIZE@{BUF\_SIZE}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{BUF\_SIZE}{BUF\_SIZE}}
+{\footnotesize\ttfamily \#define BUF\+\_\+\+SIZE~4096}
+
+\mbox{\Hypertarget{main_8h_ac348236d656b195cf77833516032bbd0}\label{main_8h_ac348236d656b195cf77833516032bbd0}} 
+\index{main.h@{main.h}!DICT\_SIZE@{DICT\_SIZE}}
+\index{DICT\_SIZE@{DICT\_SIZE}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DICT\_SIZE}{DICT\_SIZE}}
+{\footnotesize\ttfamily \#define DICT\+\_\+\+SIZE~11}
+
+\mbox{\Hypertarget{main_8h_a6a079162ea5bab34bc5cfa86d2675c69}\label{main_8h_a6a079162ea5bab34bc5cfa86d2675c69}} 
+\index{main.h@{main.h}!MAX100@{MAX100}}
+\index{MAX100@{MAX100}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MAX100}{MAX100}}
+{\footnotesize\ttfamily \#define MAX100~100}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}\label{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}} 
+\index{main.h@{main.h}!GENE@{GENE}}
+\index{GENE@{GENE}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{GENE}{GENE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgene}{gene}} \mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}}}
+
+\mbox{\Hypertarget{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}\label{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}} 
+\index{main.h@{main.h}!GENE\_DICT@{GENE\_DICT}}
+\index{GENE\_DICT@{GENE\_DICT}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{GENE\_DICT}{GENE\_DICT}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgene__dict}{gene\+\_\+dict}} \mbox{\hyperlink{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}{GENE\+\_\+\+DICT}}}
+
+\mbox{\Hypertarget{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}\label{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}} 
+\index{main.h@{main.h}!GENOME@{GENOME}}
+\index{GENOME@{GENOME}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{GENOME}{GENOME}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgenome}{genome}} \mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}}}
+
+\mbox{\Hypertarget{main_8h_a17f62ec31f18d3026d796c0021f650f4}\label{main_8h_a17f62ec31f18d3026d796c0021f650f4}} 
+\index{main.h@{main.h}!GENOME\_LIST@{GENOME\_LIST}}
+\index{GENOME\_LIST@{GENOME\_LIST}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{GENOME\_LIST}{GENOME\_LIST}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structgenome__list}{genome\+\_\+list}} \mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}}}
+
+\mbox{\Hypertarget{main_8h_a1658e04224ea81dab7ffd35344189b5f}\label{main_8h_a1658e04224ea81dab7ffd35344189b5f}} 
+\index{main.h@{main.h}!INT\_ARRAY@{INT\_ARRAY}}
+\index{INT\_ARRAY@{INT\_ARRAY}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{INT\_ARRAY}{INT\_ARRAY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structint__array}{int\+\_\+array}} \mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}}}
+
+\mbox{\Hypertarget{main_8h_afed2a7b843ddab43ebc98c2ee8c06ab3}\label{main_8h_afed2a7b843ddab43ebc98c2ee8c06ab3}} 
+\index{main.h@{main.h}!MUTATION@{MUTATION}}
+\index{MUTATION@{MUTATION}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MUTATION}{MUTATION}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmutation}{mutation}} \mbox{\hyperlink{main_8h_afed2a7b843ddab43ebc98c2ee8c06ab3}{MUTATION}}}
+
+\mbox{\Hypertarget{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}\label{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}} 
+\index{main.h@{main.h}!MUTATION\_ARRAY@{MUTATION\_ARRAY}}
+\index{MUTATION\_ARRAY@{MUTATION\_ARRAY}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MUTATION\_ARRAY}{MUTATION\_ARRAY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}} \mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}}}
+
+\mbox{\Hypertarget{main_8h_a42b4cb1030af90b29b11f025ab5aa860}\label{main_8h_a42b4cb1030af90b29b11f025ab5aa860}} 
+\index{main.h@{main.h}!PARAMS@{PARAMS}}
+\index{PARAMS@{PARAMS}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PARAMS}{PARAMS}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structparams}{params}} \mbox{\hyperlink{main_8h_a42b4cb1030af90b29b11f025ab5aa860}{PARAMS}}}
+
+\mbox{\Hypertarget{main_8h_a5217862ec48be9e2f390734c3754b7a1}\label{main_8h_a5217862ec48be9e2f390734c3754b7a1}} 
+\index{main.h@{main.h}!SHELF@{SHELF}}
+\index{SHELF@{SHELF}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{SHELF}{SHELF}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structshelf}{shelf}} \mbox{\hyperlink{main_8h_a5217862ec48be9e2f390734c3754b7a1}{SHELF}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_ab1160938bae08f610b6e2c32213df84c}\label{main_8h_ab1160938bae08f610b6e2c32213df84c}} 
+\index{main.h@{main.h}!consumidor@{consumidor}}
+\index{consumidor@{consumidor}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{consumidor()}{consumidor()}}
+{\footnotesize\ttfamily void$\ast$ consumidor (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+Código das threads consumidoras 
+\begin{DoxyParams}{Parameters}
+{\em param} & -\/ parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a66651c44028aa4e15ef1ee1b5467b0e5}\label{main_8h_a66651c44028aa4e15ef1ee1b5467b0e5}} 
+\index{main.h@{main.h}!create\_gene@{create\_gene}}
+\index{create\_gene@{create\_gene}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{create\_gene()}{create\_gene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}}$\ast$ create\+\_\+gene (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{seq }\end{DoxyParamCaption})}
+
+Creates a new gene given a gene name and a nucleotide sequence 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ new gene name \\
+\hline
+{\em seq} & -\/ new gene nucleotide sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ pointer to the created gene 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a1959c28ed3b14203bb92d9291cf2bc36}\label{main_8h_a1959c28ed3b14203bb92d9291cf2bc36}} 
+\index{main.h@{main.h}!find\_gene@{find\_gene}}
+\index{find\_gene@{find\_gene}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{find\_gene()}{find\_gene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}}$\ast$ find\+\_\+gene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$}]{genome,  }\item[{char $\ast$}]{gene\+\_\+name }\end{DoxyParamCaption})}
+
+Searches for a gene in a given genome 
+\begin{DoxyParams}{Parameters}
+{\em genome} & -\/ genome to be scanned \\
+\hline
+{\em gene\+\_\+name} & -\/ gene to searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ pointer to the found gene or NULL if no match 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a9651d8d6b928be54c48d3bfc80fed592}\label{main_8h_a9651d8d6b928be54c48d3bfc80fed592}} 
+\index{main.h@{main.h}!find\_gene\_dict@{find\_gene\_dict}}
+\index{find\_gene\_dict@{find\_gene\_dict}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{find\_gene\_dict()}{find\_gene\_dict()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}{GENE\+\_\+\+DICT}}$\ast$ find\+\_\+gene\+\_\+dict (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Searches, by name, for a given gene in a known gene dictionary 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ gene name to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ pointer to the found dictionary entry or NULL if non-\/existent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_abc7f3becc7eedf180252ac187dea4890}\label{main_8h_abc7f3becc7eedf180252ac187dea4890}} 
+\index{main.h@{main.h}!find\_genome@{find\_genome}}
+\index{find\_genome@{find\_genome}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{find\_genome()}{find\_genome()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}}$\ast$ find\+\_\+genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$}]{gl,  }\item[{char $\ast$}]{g\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_aac76f46287962d9b1c183d62e9b75c19}\label{main_8h_aac76f46287962d9b1c183d62e9b75c19}} 
+\index{main.h@{main.h}!find\_protein\_name@{find\_protein\_name}}
+\index{find\_protein\_name@{find\_protein\_name}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{find\_protein\_name()}{find\_protein\_name()}}
+{\footnotesize\ttfamily char$\ast$ find\+\_\+protein\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{protein }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_a573ee832e2c6843bce1e8ae88055c5c5}\label{main_8h_a573ee832e2c6843bce1e8ae88055c5c5}} 
+\index{main.h@{main.h}!free\_mutations@{free\_mutations}}
+\index{free\_mutations@{free\_mutations}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{free\_mutations()}{free\_mutations()}}
+{\footnotesize\ttfamily void free\+\_\+mutations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$}]{mutation\+\_\+array }\end{DoxyParamCaption})}
+
+Frees a given mutation array 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}} & -\/ pointer to the previously allocated mutation array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_a6717246a71ecf97977c0826d9e569642}\label{main_8h_a6717246a71ecf97977c0826d9e569642}} 
+\index{main.h@{main.h}!gene\_cmp@{gene\_cmp}}
+\index{gene\_cmp@{gene\_cmp}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{gene\_cmp()}{gene\_cmp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}}$\ast$ gene\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}}}]{g1,  }\item[{\mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}}}]{g2 }\end{DoxyParamCaption})}
+
+Compares two genes by subtracting each of the nucleotide sequences values of g1 and g2 
+\begin{DoxyParams}{Parameters}
+{\em g1} & -\/ gene 1 to be compared \\
+\hline
+{\em g2} & -\/ gene 2 to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer array containing the differences between the tow genes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a26d41145462be79a5bbba299b8a7d2ad}\label{main_8h_a26d41145462be79a5bbba299b8a7d2ad}} 
+\index{main.h@{main.h}!genome\_cmp@{genome\_cmp}}
+\index{genome\_cmp@{genome\_cmp}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{genome\_cmp()}{genome\_cmp()}}
+{\footnotesize\ttfamily void genome\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$}]{genome,  }\item[{\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$}]{mutation\+\_\+array }\end{DoxyParamCaption})}
+
+Compares a given genome against all its subsequent genemoes in a genome list 
+\begin{DoxyParams}{Parameters}
+{\em genome} & -\/ reference genome to compare against all the subsequent genomes \\
+\hline
+{\em \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}} & -\/ array in which the comparison results (mutations) will be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_ac4a99598a892709379a7a7723fc16dec}\label{main_8h_ac4a99598a892709379a7a7723fc16dec}} 
+\index{main.h@{main.h}!get\_gene\_padding@{get\_gene\_padding}}
+\index{get\_gene\_padding@{get\_gene\_padding}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{get\_gene\_padding()}{get\_gene\_padding()}}
+{\footnotesize\ttfamily int get\+\_\+gene\+\_\+padding (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Finds the number of dummy nucleotides to append to the nucleotide sequence Not required but useful if displaying a square matrix with the gene comparison input 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ gene name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ number of dummy nucleotides to append 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_ad6598c9b9c3f2462f9a484d280ef1d67}\label{main_8h_ad6598c9b9c3f2462f9a484d280ef1d67}} 
+\index{main.h@{main.h}!get\_time\_useconds@{get\_time\_useconds}}
+\index{get\_time\_useconds@{get\_time\_useconds}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{get\_time\_useconds()}{get\_time\_useconds()}}
+{\footnotesize\ttfamily long get\+\_\+time\+\_\+useconds (\begin{DoxyParamCaption}\item[{long $\ast$}]{time\+\_\+usec }\end{DoxyParamCaption})}
+
+Gets the number of microseconds elapsed since 1/1/1970 
+\begin{DoxyParams}{Parameters}
+{\em time\+\_\+usec} & -\/ variable in which the elapsed time will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ elapsed time since 1/1/1970 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a8a1a61b7cdb55a664a4251ebcec1b0a0}\label{main_8h_a8a1a61b7cdb55a664a4251ebcec1b0a0}} 
+\index{main.h@{main.h}!handler@{handler}}
+\index{handler@{handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily void handler (\begin{DoxyParamCaption}\item[{int}]{signal\+\_\+number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_a3e586bc6bd868c8c00d965b92395e426}\label{main_8h_a3e586bc6bd868c8c00d965b92395e426}} 
+\index{main.h@{main.h}!insert\_gene@{insert\_gene}}
+\index{insert\_gene@{insert\_gene}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{insert\_gene()}{insert\_gene()}}
+{\footnotesize\ttfamily void insert\+\_\+gene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$}]{genome,  }\item[{\mbox{\hyperlink{main_8h_a02a50e28dff2a9bbc394e7fe1ab3e065}{GENE}} $\ast$}]{gene }\end{DoxyParamCaption})}
+
+Inserts a new gene into a given genome 
+\begin{DoxyParams}{Parameters}
+{\em genome} & -\/ pre-\/existing genome \\
+\hline
+{\em gene} & -\/ gene to be inserted in the given genome \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_adced95ea5d9673a7425e85474829d8ae}\label{main_8h_adced95ea5d9673a7425e85474829d8ae}} 
+\index{main.h@{main.h}!insert\_genome@{insert\_genome}}
+\index{insert\_genome@{insert\_genome}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{insert\_genome()}{insert\_genome()}}
+{\footnotesize\ttfamily void insert\+\_\+genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$}]{gl,  }\item[{\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+Inserts a new genome at the tail of given genome list 
+\begin{DoxyParams}{Parameters}
+{\em gl} & -\/ genome list \\
+\hline
+{\em g} & -\/ new genome \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_a2e0c92c61965fbf69ab5e7ab6ddffbcc}\label{main_8h_a2e0c92c61965fbf69ab5e7ab6ddffbcc}} 
+\index{main.h@{main.h}!insert\_int\_array@{insert\_int\_array}}
+\index{insert\_int\_array@{insert\_int\_array}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{insert\_int\_array()}{insert\_int\_array()}}
+{\footnotesize\ttfamily void insert\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}} $\ast$}]{int\+\_\+array,  }\item[{int}]{element }\end{DoxyParamCaption})}
+
+Inserts a new element into a given \mbox{\hyperlink{structint__array}{int\+\_\+array}} 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structint__array}{int\+\_\+array}}} & -\/ given integer array \\
+\hline
+{\em element} & -\/ element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_abe64e730ad313621e2c507047efbae67}\label{main_8h_abe64e730ad313621e2c507047efbae67}} 
+\index{main.h@{main.h}!insert\_mutation@{insert\_mutation}}
+\index{insert\_mutation@{insert\_mutation}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{insert\_mutation()}{insert\_mutation()}}
+{\footnotesize\ttfamily void insert\+\_\+mutation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$}]{mutation\+\_\+array,  }\item[{char $\ast$}]{genome\+\_\+a,  }\item[{char $\ast$}]{genome\+\_\+b,  }\item[{char $\ast$}]{gene,  }\item[{\mbox{\hyperlink{main_8h_a1658e04224ea81dab7ffd35344189b5f}{INT\+\_\+\+ARRAY}} $\ast$}]{gene\+\_\+mut }\end{DoxyParamCaption})}
+
+Inserts a new mutation into a given mutation array 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}} & -\/ array of mutations \\
+\hline
+{\em genome\+\_\+a} & -\/ genome used for comparison against genome b \\
+\hline
+{\em genome\+\_\+b} & -\/ genome used for comparison against genome a \\
+\hline
+{\em gene} & -\/ gene on which the two genomes were previously compared \\
+\hline
+{\em gene\+\_\+mut} & -\/ integer array with all the found mutations \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_aeccd49b8e84cc8458b616649d75e57a7}\label{main_8h_aeccd49b8e84cc8458b616649d75e57a7}} 
+\index{main.h@{main.h}!lancaProdCons@{lancaProdCons}}
+\index{lancaProdCons@{lancaProdCons}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{lancaProdCons()}{lancaProdCons()}}
+{\footnotesize\ttfamily void lanca\+Prod\+Cons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_a66e4315bc2141d303060778f7fed43a6}\label{main_8h_a66e4315bc2141d303060778f7fed43a6}} 
+\index{main.h@{main.h}!parse\_genome@{parse\_genome}}
+\index{parse\_genome@{parse\_genome}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{parse\_genome()}{parse\_genome()}}
+{\footnotesize\ttfamily void parse\+\_\+genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$}]{gl,  }\item[{char $\ast$}]{cds }\end{DoxyParamCaption})}
+
+Parses a given code region sequence by genomes and genes, populating the received genome list with the loaded values 
+\begin{DoxyParams}{Parameters}
+{\em gl} & -\/ pointer to the genome list \\
+\hline
+{\em cds} & -\/ loaded given code region sequence containing all the genomes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_afe5ba97532a3015460a8a03afdf959de}\label{main_8h_afe5ba97532a3015460a8a03afdf959de}} 
+\index{main.h@{main.h}!print\_genome@{print\_genome}}
+\index{print\_genome@{print\_genome}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{print\_genome()}{print\_genome()}}
+{\footnotesize\ttfamily void print\+\_\+genome (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a064ce79af84ab45fc5c1fdfc0486fe04}{GENOME}}}]{genome }\end{DoxyParamCaption})}
+
+prints a given genome to the std output 
+\begin{DoxyParams}{Parameters}
+{\em genome} & -\/ genome to be printed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_af05ed034df91972aa3a8128cfd713e75}\label{main_8h_af05ed034df91972aa3a8128cfd713e75}} 
+\index{main.h@{main.h}!produtor@{produtor}}
+\index{produtor@{produtor}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{produtor()}{produtor()}}
+{\footnotesize\ttfamily void$\ast$ produtor (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+Código das threads produtoras 
+\begin{DoxyParams}{Parameters}
+{\em param} & -\/ parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8h_a5885a876daee7f61c9869c8b7eb47c2d}\label{main_8h_a5885a876daee7f61c9869c8b7eb47c2d}} 
+\index{main.h@{main.h}!read\_genomes@{read\_genomes}}
+\index{read\_genomes@{read\_genomes}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{read\_genomes()}{read\_genomes()}}
+{\footnotesize\ttfamily void read\+\_\+genomes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a17f62ec31f18d3026d796c0021f650f4}{GENOME\+\_\+\+LIST}} $\ast$}]{gl,  }\item[{char $\ast$}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_af200aee142b36264b2143ec19fabe936}\label{main_8h_af200aee142b36264b2143ec19fabe936}} 
+\index{main.h@{main.h}!readn@{readn}}
+\index{readn@{readn}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{readn()}{readn()}}
+{\footnotesize\ttfamily ssize\+\_\+t readn (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_a1e3374ecffaa10ce121b069f19f868db}\label{main_8h_a1e3374ecffaa10ce121b069f19f868db}} 
+\index{main.h@{main.h}!remove\_white\_spaces@{remove\_white\_spaces}}
+\index{remove\_white\_spaces@{remove\_white\_spaces}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{remove\_white\_spaces()}{remove\_white\_spaces()}}
+{\footnotesize\ttfamily void remove\+\_\+white\+\_\+spaces (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+Removes white spaces \textquotesingle{} \textquotesingle{} and \textquotesingle{}~\newline
+\textquotesingle{} from a given sting 
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ string with no \textquotesingle{} \textquotesingle{} or \textquotesingle{}~\newline
+\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_ac0a6f9739a58e90a8e68610dab5091e7}\label{main_8h_ac0a6f9739a58e90a8e68610dab5091e7}} 
+\index{main.h@{main.h}!save\_mutation\_array@{save\_mutation\_array}}
+\index{save\_mutation\_array@{save\_mutation\_array}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{save\_mutation\_array()}{save\_mutation\_array()}}
+{\footnotesize\ttfamily void save\+\_\+mutation\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$}]{mutation\+\_\+array,  }\item[{char $\ast$}]{path,  }\item[{int}]{detail }\end{DoxyParamCaption})}
+
+Saves the mutation array to file 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}} & -\/ array containing all the discovered mutations \\
+\hline
+{\em path} & -\/ path to the file on which the results will be stored \\
+\hline
+{\em detail} & -\/ detail flag. (0) outputs only the number of found mutations per genome / gene (1) outputs all the found mutations (on a nucleotide level) per genome / gene \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_a124b18d9f81c36faf86a331e621ac58c}\label{main_8h_a124b18d9f81c36faf86a331e621ac58c}} 
+\index{main.h@{main.h}!save\_mutation\_array\_pipe@{save\_mutation\_array\_pipe}}
+\index{save\_mutation\_array\_pipe@{save\_mutation\_array\_pipe}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{save\_mutation\_array\_pipe()}{save\_mutation\_array\_pipe()}}
+{\footnotesize\ttfamily void save\+\_\+mutation\+\_\+array\+\_\+pipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8h_a23553b259ef7f9c6f61eeebbae8a2425}{MUTATION\+\_\+\+ARRAY}} $\ast$}]{mutation\+\_\+array,  }\item[{int}]{detail,  }\item[{int}]{w\+\_\+fds }\end{DoxyParamCaption})}
+
+Saves the mutation array to pipe 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structmutation__array}{mutation\+\_\+array}}} & -\/ array containing all the discovered mutations \\
+\hline
+{\em detail} & -\/ detail flag. \\
+\hline
+{\em w\+\_\+fds} & -\/ descritor (0) outputs only the number of found mutations per genome / gene (1) outputs all the found mutations (on a nucleotide level) per genome / gene \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8h_a6bbe0e6527a26e4b76c5f06b60f1b1c7}\label{main_8h_a6bbe0e6527a26e4b76c5f06b60f1b1c7}} 
+\index{main.h@{main.h}!workerThread@{workerThread}}
+\index{workerThread@{workerThread}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{workerThread()}{workerThread()}}
+{\footnotesize\ttfamily void$\ast$ worker\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8h_a06f39d11eaf439a3f67681a4c3ecffcd}\label{main_8h_a06f39d11eaf439a3f67681a4c3ecffcd}} 
+\index{main.h@{main.h}!writen@{writen}}
+\index{writen@{writen}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{writen()}{writen()}}
+{\footnotesize\ttfamily ssize\+\_\+t writen (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8h_a90cd2f88eead02158d3bd4925cd111c5}\label{main_8h_a90cd2f88eead02158d3bd4925cd111c5}} 
+\index{main.h@{main.h}!gd@{gd}}
+\index{gd@{gd}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{gd}{gd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_ae1a06553f128c2d208e8f8fcd27082ec}{GENE\+\_\+\+DICT}} gd\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\{\textcolor{stringliteral}{"{}gene=ORF1ab"{}}, \textcolor{stringliteral}{"{}ORF1ab"{}}, 115, 115, 7\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=S"{}}, \textcolor{stringliteral}{"{}surface"{}}, 62, 62, 22\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=ORF3a"{}}, \textcolor{stringliteral}{"{}ORF3a"{}}, 28, 30, 12\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=E"{}}, \textcolor{stringliteral}{"{}envelope"{}}, 15, 16, 12\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=M"{}}, \textcolor{stringliteral}{"{}membrane"{}}, 26, 27, 33\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=ORF6"{}}, \textcolor{stringliteral}{"{}ORF6"{}}, 14, 14, 10\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=ORF7a"{}}, \textcolor{stringliteral}{"{}ORF7a"{}}, 19, 20, 14\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=ORF7b"{}}, \textcolor{stringliteral}{"{}ORF7b"{}}, 12, 12, 12\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=ORF8"{}}, \textcolor{stringliteral}{"{}ORF8"{}}, 19, 20, 14\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=N"{}}, \textcolor{stringliteral}{"{}nucleocapsid"{}}, 36, 36, 36\},}
+\DoxyCodeLine{                  \{\textcolor{stringliteral}{"{}gene=ORF10"{}}, \textcolor{stringliteral}{"{}ORF10"{}}, 11, 11, 4\}\}}
+
+\end{DoxyCode}
